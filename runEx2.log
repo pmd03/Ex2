@@ -1,0 +1,194 @@
+C:\Users\username\PycharmProjects\pythonProject\venv\Scripts\python.exe C:/Users/username/PycharmProjects/pythonProject/DataExplorationEx2.py
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/C:/Users/PaulM/Spark/spark-3.0.1-bin-hadoop2.7/jars/spark-unsafe_2.12-3.0.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21/02/10 10:42:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 3.0.1
+      /_/
+
+Using Python version 3.8.7 (tags/v3.8.7:6503f05, Dec 21 2020 17:59:51)
+SparkSession available as 'spark'.
+<Section: postgres>
+{'user': 'postgres', 'password': '1234', 'driver': 'org.postgresql.Driver'}
+21/02/10 10:43:05 WARN ProcfsMetricsGetter: Exception when trying to compute pagesize, as a result reporting of ProcessTree metrics is stopped
++-----------+-------+
+|_LinkTypeId|  count|
++-----------+-------+
+|          1|6061748|
+|          3|1054222|
++-----------+-------+
+
+root
+ |-- _CreationDate: timestamp (nullable = true)
+ |-- _Id: integer (nullable = true)
+ |-- _LinkTypeId: integer (nullable = true)
+ |-- _PostId: integer (nullable = true)
+ |-- _RelatedPostId: integer (nullable = true)
+
++-----------+-------+
+|_LinkTypeId|  count|
++-----------+-------+
+|          1|6061748|
+|          3|1054222|
++-----------+-------+
+
+linktype !=1
++--------------------+---------+-----------+-------+--------------+
+|       _CreationDate|      _Id|_LinkTypeId|_PostId|_RelatedPostId|
++--------------------+---------+-----------+-------+--------------+
+|2013-02-18 03:03:...|749670241|          3|  70714|        355934|
+|2013-02-18 03:03:...|749670246|          3|  86947|         73713|
+|2013-02-18 03:03:...|749670247|          3|  97679|         85122|
+|2013-02-18 03:03:...|749670248|          3|  99408|          1711|
+|2013-02-18 03:03:...|749670249|          3|  26925|          8127|
+|2013-02-18 03:03:...|749670250|          3|  73185|           672|
+|2013-02-18 03:03:...|749670251|          3|  81150|         48935|
+|2013-02-18 03:03:...|749670252|          3| 110362|          1854|
+|2013-02-18 03:03:...|749670253|          3| 117348|        506368|
+|2013-02-18 03:03:...|749670254|          3|   2366|         44965|
+|2013-02-18 03:03:...|749670255|          3|  87657|         24692|
+|2013-02-18 03:03:...|749670256|          3|  99425|          1711|
+|2013-02-18 03:03:...|749670257|          3| 104203|         10688|
+|2013-02-18 03:03:...|749670258|          3| 107122|          3830|
+|2013-02-18 03:03:...|749670259|          3| 107122|        111761|
+|2013-02-18 03:03:...|749670260|          3|  83803|         19207|
+|2013-02-18 03:03:...|749670261|          3|  86676|         24109|
+|2013-02-18 03:03:...|749670262|          3|  91641|         56103|
+|2013-02-18 03:03:...|749670263|          3| 101601|        101548|
+|2013-02-18 03:03:...|749670264|          3| 111897|        105434|
++--------------------+---------+-----------+-------+--------------+
+only showing top 20 rows
+
+1054222
+root
+ |-- _CreationDate: timestamp (nullable = true)
+ |-- _Id: integer (nullable = true)
+ |-- _LinkTypeId: integer (nullable = true)
+ |-- _PostId: integer (nullable = true)
+ |-- _RelatedPostId: integer (nullable = true)
+
++--------------------+------------+
+|  max(_CreationDate)|min(_PostId)|
++--------------------+------------+
+|2020-12-06 10:22:...|         559|
++--------------------+------------+
+
+Completed Analysis for Exercise2
+write dataframe to RDBMS table 
++--------------------+---------+-----------+-------+--------------+
+|       _CreationDate|      _Id|_LinkTypeId|_PostId|_RelatedPostId|
++--------------------+---------+-----------+-------+--------------+
+|2013-02-18 03:03:...|749670241|          3|  70714|        355934|
+|2013-02-18 03:03:...|749670246|          3|  86947|         73713|
+|2013-02-18 03:03:...|749670247|          3|  97679|         85122|
+|2013-02-18 03:03:...|749670248|          3|  99408|          1711|
+|2013-02-18 03:03:...|749670249|          3|  26925|          8127|
+|2013-02-18 03:03:...|749670250|          3|  73185|           672|
+|2013-02-18 03:03:...|749670251|          3|  81150|         48935|
+|2013-02-18 03:03:...|749670252|          3| 110362|          1854|
+|2013-02-18 03:03:...|749670253|          3| 117348|        506368|
+|2013-02-18 03:03:...|749670254|          3|   2366|         44965|
+|2013-02-18 03:03:...|749670255|          3|  87657|         24692|
+|2013-02-18 03:03:...|749670256|          3|  99425|          1711|
+|2013-02-18 03:03:...|749670257|          3| 104203|         10688|
+|2013-02-18 03:03:...|749670258|          3| 107122|          3830|
+|2013-02-18 03:03:...|749670259|          3| 107122|        111761|
+|2013-02-18 03:03:...|749670260|          3|  83803|         19207|
+|2013-02-18 03:03:...|749670261|          3|  86676|         24109|
+|2013-02-18 03:03:...|749670262|          3|  91641|         56103|
+|2013-02-18 03:03:...|749670263|          3| 101601|        101548|
+|2013-02-18 03:03:...|749670264|          3| 111897|        105434|
++--------------------+---------+-----------+-------+--------------+
+only showing top 20 rows
+
+jdbcDF schema
+jdbcDF: <class 'pyspark.sql.dataframe.DataFrame'>
+root
+ |-- _CreationDate: timestamp (nullable = true)
+ |-- _Id: integer (nullable = true)
+ |-- _LinkTypeId: integer (nullable = true)
+ |-- _PostId: integer (nullable = true)
+ |-- _RelatedPostId: integer (nullable = true)
+
+select with predicate the dataframe into collection spark dataset
+jdbcDF: Row(_CreationDate=datetime.datetime(2013, 2, 18, 3, 3, 16, 917000), _Id=749670254, _LinkTypeId=3, _PostId=2366, _RelatedPostId=44965)
+jdbcDF: Row(_CreationDate=datetime.datetime(2013, 2, 18, 3, 3, 16, 917000), _Id=749670448, _LinkTypeId=3, _PostId=559, _RelatedPostId=1711)
+jdbcDF: Row(_CreationDate=datetime.datetime(2013, 4, 15, 2, 48, 31, 623000), _Id=786782201, _LinkTypeId=3, _PostId=6301, _RelatedPostId=782629)
+jdbcDF: Row(_CreationDate=datetime.datetime(2013, 7, 20, 16, 58, 19, 480000), _Id=814412730, _LinkTypeId=3, _PostId=4952, _RelatedPostId=173)
+jdbcDF: Row(_CreationDate=datetime.datetime(2016, 5, 9, 5, 8, 15, 53000), _Id=1205775372, _LinkTypeId=3, _PostId=1304, _RelatedPostId=876473)
+jdbcDF: Row(_CreationDate=datetime.datetime(2017, 4, 7, 1, 36, 37, 437000), _Id=1308197429, _LinkTypeId=3, _PostId=6899, _RelatedPostId=194852)
+jdbcDF: Row(_CreationDate=datetime.datetime(2019, 12, 23, 13, 22, 37, 243000), _Id=1721654467, _LinkTypeId=3, _PostId=9751, _RelatedPostId=371)
+jdbcDF: Row(_CreationDate=datetime.datetime(2019, 12, 23, 13, 23, 32, 393000), _Id=1721654558, _LinkTypeId=3, _PostId=2483, _RelatedPostId=496096)
+select from the TempView Postlink view
++-------+--------------------+
+|_PostId|       _CreationDate|
++-------+--------------------+
+|  70714|2013-02-18 03:03:...|
+|  86947|2013-02-18 03:03:...|
+|  97679|2013-02-18 03:03:...|
+|  99408|2013-02-18 03:03:...|
+|  26925|2013-02-18 03:03:...|
+|  73185|2013-02-18 03:03:...|
+|  81150|2013-02-18 03:03:...|
+| 110362|2013-02-18 03:03:...|
+| 117348|2013-02-18 03:03:...|
+|   2366|2013-02-18 03:03:...|
+|  87657|2013-02-18 03:03:...|
+|  99425|2013-02-18 03:03:...|
+| 104203|2013-02-18 03:03:...|
+| 107122|2013-02-18 03:03:...|
+| 107122|2013-02-18 03:03:...|
+|  83803|2013-02-18 03:03:...|
+|  86676|2013-02-18 03:03:...|
+|  91641|2013-02-18 03:03:...|
+| 101601|2013-02-18 03:03:...|
+| 111897|2013-02-18 03:03:...|
++-------+--------------------+
+only showing top 20 rows
+
+21/02/10 10:50:33 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+21/02/10 10:50:33 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+21/02/10 10:50:36 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+21/02/10 10:50:36 WARN ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore UNKNOWN@192.168.1.218
+21/02/10 10:50:37 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+select from the GlobalTempView PostLinkGlobalView
++--------------------+-----------+
+|       _CreationDate|_LinkTypeId|
++--------------------+-----------+
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
+|2013-02-18 03:03:...|          3|
++--------------------+-----------+
+
+New Session select from the GlobalTempView PostLinkGlobalView
++--------------------+---------+-----------+-------+--------------+
+|       _CreationDate|      _Id|_LinkTypeId|_PostId|_RelatedPostId|
++--------------------+---------+-----------+-------+--------------+
+|2013-02-18 03:03:...|749670241|          3|  70714|        355934|
+|2013-02-18 03:03:...|749670246|          3|  86947|         73713|
+|2013-02-18 03:03:...|749670247|          3|  97679|         85122|
+|2013-02-18 03:03:...|749670248|          3|  99408|          1711|
+|2013-02-18 03:03:...|749670249|          3|  26925|          8127|
+|2013-02-18 03:03:...|749670250|          3|  73185|           672|
+|2013-02-18 03:03:...|749670251|          3|  81150|         48935|
++--------------------+---------+-----------+-------+--------------+
+
+stop context
+
+completed
+
+Process finished with exit code 0
+ 
