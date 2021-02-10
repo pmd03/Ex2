@@ -25,6 +25,7 @@ Note runEx2.log (is example of captured output of a run as standalone laptop usi
 
 Run DataExplorationEx2.py from an IDE of choice ( python.exe DataExplorationEx2.py [probably can add absolute path for each file] )
 DataExplorationEx2.py requires a hardcode change in main dunder conditional section(confPath and xmlPath) to set absolute path of ini file and the unzipped PostLinks.xml (which is got from https://archive.org/details/stackexchange named stackoverflow.com-PostLinks.7z. Used this source file because it was one of the smaller size and a limited laptop standalone resource.
+The db_properties.ini file should be editied with appropriate values before running DataExplorationEx2.py.
 
 Logon as user postgres create a database if required, run the createTable_Postlink.sql script to create an empty database table.
 
