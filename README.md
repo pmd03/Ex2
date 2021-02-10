@@ -13,17 +13,21 @@ for example
 postgresql-42.2.18.jar
 spark-xml_2.12-0.9.0
 
+IDE used was PyCharm community 2020.3 
 
-IDE used is PyCharm community 2020.3 
+there are three files to deploy/implement besides above mentioned environment variables checking/setting.
 
-there are two files to implement besides above mentioned environment variables
+1. db_properties.ini
+2. createTable_Postlink.sql
+3. DataExplorationEx2.py
 
-DataExplorationEx2.py
-db_properties.ini
-runEx2.log (example of captured output of a run as standalone laptop using Windows 10)
+Note runEx2.log (is example of captured output of a run as standalone laptop using Windows 10)
 
-run DataExplorationEx2.py from an IDE of choice ( python.exe DataExplorationEx2.py [probably can add absolute path for each file] )
+Run DataExplorationEx2.py from an IDE of choice ( python.exe DataExplorationEx2.py [probably can add absolute path for each file] )
 DataExplorationEx2.py requires a hardcode change to set path of unzipped PostLinks.xml (which is got from https://archive.org/details/stackexchange
-as stackoverflow.com-PostLinks.7z. I used this source file because it was one of the smaller size and my limited laptop resource.
+as stackoverflow.com-PostLinks.7z. Used this source file because it was one of the smaller size and my limited laptop resource.
+
+Logon as user postgres create a database if required, run the createTable_Postlink.sql script to create an empty database table.
+#### Cautionary note which ever tablename used, will be overwritten which means in postgresql if it already exists it will be dropped and recreated, any data in this table beforehand will be lost. The tablename you decide to use is important make sure it is a new tablename for saftey :)
 
 Did not containerize - will try later.
