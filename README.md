@@ -30,4 +30,4 @@ Logon as user postgres create a database if required, run the createTable_Postli
 
 NB Cautionary note whichever tablename used, will be overwritten which means in postgresql if it already exists it will be dropped and recreated, any data in this table beforehand will be lost. The tablename you decide to use is important make sure it is a new tablename for saftey :)
 
-Did not containerize - will try later.
+Did not containerize - will try later. Logging/monitoring pipeline results in persistent table(s) TBC next.
